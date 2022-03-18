@@ -1,0 +1,17 @@
+*~
+\#*\#
+*.elc
+.#*
+*.log
+nohup.out
+*.iml
+build
+.xmonad/xmonad-x86_64-linux
+.xmonad/xmonad.errors
+.xmonad/xmonad.hi
+*.o
+.DS_Store
+.idea
+out
+TAGS
+.projectrc

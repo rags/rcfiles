@@ -1,0 +1,69 @@
+[alias]
+   co = checkout
+   ci = commit
+   st = status 
+   ss = status -s
+   b = branch
+   sr = svn rebase
+   sd = svn dcommit
+   r = reset
+   rh  = reset --hard
+   rhh-1 = reset --hard HEAD~
+   rs  = reset --soft
+   rsh-1  = reset --soft HEAD~
+   amend-staged = commit --amend -C HEAD
+   amend = !git au && git commit --amend -aC HEAD
+   sf = show --name-status
+   pull = pull --log --rebase
+   rpull = pull --log --rebase --recurse-submodules 
+   rcont = !git au && git rebase --continue
+   cpcont = !git au && git cp --continue
+   mcont = !git au && git merge --continue
+   l3 = log -3
+   l5 = log -5
+   l10 = log -10
+   l20 = log -20
+   ls = log --name-status
+   ls3 = log --name-status -3
+   ls5 = log --name-status -5
+   ls10 = log --name-status -10
+   ls20 = log --name-status -20
+   a   = add
+   aa = add -A
+   au = add -u
+   dag = log --graph  --date-order
+   lf = log --graph  --date-order --pretty=full
+   clone-r = clone --recursive   
+   d = diff
+   sh = stash
+   sl = !git stash && git pull && git stash pop
+   cp = cherry-pick
+   ri = rebase -i
+[color]
+   ui = auto
+[color "status"]
+   added = yellow
+   changed = green
+   untracked = cyan
+[format]
+   pretty = format:"%h %C(yellow)%ci%Creset %Cgreen%an%Creset | %s"
+[push]
+   default = tracking
+[core]
+	autocrlf = input
+	excludesfile = ~/.gitignore
+	pager = less -FMRiX
+	editor = emacsclient -t
+[receive]
+	denyCurrentBranch = false
+[user]
+	name = Raghunandan Ramakrishna Rao
+	email = raghunr@amazon.com
+[branch]
+	autosetuprebase = always
+[amazon]
+	append-cr-url = true
+	pull-request-by-default = true
+	setup-crv = true
+[commit]
+	template = /home/raghunr/cp-commit-template.txt
